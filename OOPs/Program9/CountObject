@@ -1,0 +1,33 @@
+package com.yash.Program9;
+
+public class CountObject {
+	
+	static int count;
+	public CountObject() {
+		count++;
+	}
+	
+	public static void main(String[] args) {
+		
+		CountObject cobj1 = new CountObject();
+		CountObject cobj2 = new CountObject();
+		CountObject cobj3 = new CountObject();
+		CountObject cobj4 = new CountObject();
+		CountObject cobj5 = new CountObject();
+		
+		System.out.println("Hash code of freed objects:- "+cobj1.hashCode()+" "+cobj3.hashCode());
+		
+		cobj1 = null;
+		CountObject cobj6 = cobj3;
+		
+		System.gc();
+		System.out.println("Currently class is having "+CountObject.count+" objects.");
+		
+	}
+	
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("Finalize method called and objects are freed");
+	}
+
+}

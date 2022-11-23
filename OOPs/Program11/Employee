@@ -1,0 +1,30 @@
+package com.yash.Program11;
+
+import java.time.LocalDate;
+
+public class Employee {
+	
+	private int empId;
+	private String empName;
+	private int empSalary;
+	private String empAddress;
+	private LocalDate emp_dob;
+	private LocalDate emp_doj;
+	
+	public Employee(int i, String empName, int j, String empAddress, LocalDate emp_dob, LocalDate emp_doj) {
+		super();
+		this.empId = i;
+		this.empName = empName;
+		this.empSalary = j;
+		this.empAddress = empAddress;
+		this.emp_dob = emp_dob;
+		this.emp_doj = emp_doj;
+	}
+	
+	@Override
+	public String toString() {
+		
+		return "EmpId: "+empId+", Name: "+empName+", Salary: "+empSalary+", Address: "+empAddress+", DOB: "+emp_dob+", DOJ: "+emp_doj;
+	}
+
+}

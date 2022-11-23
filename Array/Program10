@@ -1,0 +1,35 @@
+package com.yash;
+
+import java.util.Scanner;
+
+public class StringArraySorting {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter how many strings you want to enter");
+		int limit = sc.nextInt();
+		String[] words = new String[limit];
+		String temp;
+		int length = 0;
+		System.out.println("Enter the list of strings");
+		for (int j = 0; j < limit; j++) {
+			words[j] = sc.next();
+		}
+		for (int j = 0; j < limit; j++) {
+			for (int k = j; k < limit; k++) {
+				if(words[j].length() > words[k].length()) {
+					temp = words[j];
+					words[j] = words[k];
+					words[k] = temp;
+				}
+			}
+		}
+		for(String a : words)
+		{
+			System.out.println(a);
+		}
+        sc.close();
+	}
+
+}

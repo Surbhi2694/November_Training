@@ -1,0 +1,43 @@
+package com.yash.Program1;
+
+import java.time.LocalDate;
+
+public class Test {
+	public static void main(String[] args) {
+
+		Department[] dpt = new Department[3];
+		
+		dpt[0] = new Department();
+		dpt[1] = new Department();
+		dpt[2] = new Department();
+		
+		dpt[0].setDeptid(1001);
+		dpt[0].setDname("IT");
+		dpt[1].setDeptid(1002);
+		dpt[1].setDname("HR");
+		dpt[2].setDeptid(1003);
+		dpt[2].setDname("Finance");
+
+		Employee emp1 = new Employee(LocalDate.of(1990, 3, 12), "Vijay Nagar", 01, "Ajay", 10000,
+					LocalDate.of(2021, 12, 12), "Indore", dpt[0], 123456789, "sample@gmail.com");
+		Employee emp2 = new Employee(LocalDate.of(1992, 1, 10), "Sudama Nagar", 02, "Akhshay", 12000,
+				LocalDate.of(2021, 4, 28), "Indore", dpt[1], 987654321, "example@gmail.com");
+		Employee emp3 = new Employee(LocalDate.of(1994, 9, 21), "Palasia", 03, "Pradeep", 15000,
+				LocalDate.of(2021, 2, 17), "Indore", dpt[2], 543216789, "test@gmail.com");
+		
+
+		Customer customer1 = new Customer(LocalDate.of(2001, 3, 06), "Sudama Nagar", 04, "Amit", LocalDate.of(2022, 3, 10),
+				"Bhopal", 234567891, "extest@gmail.com");
+		Customer customer2 = new Customer(LocalDate.of(1998, 7, 06), "Nanda Nagar", 05, "Shikha", LocalDate.of(2022, 1, 4),
+				"Pune", 237891456, "samtest@gmail.com");
+		
+        System.out.println(emp1.toString());
+        System.out.println(emp2.toString());
+        System.out.println(emp3.toString());
+        System.out.println(customer1.toString());
+        System.out.println(customer2.toString());
+       
+        
+
+	}
+}

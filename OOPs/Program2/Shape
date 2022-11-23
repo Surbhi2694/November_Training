@@ -1,0 +1,6 @@
+package com.yash.Program2;
+
+public interface Shape {
+
+	double area(String[] str);	
+}

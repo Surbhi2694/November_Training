@@ -1,0 +1,82 @@
+package com.yash.Program3;
+
+import java.time.LocalDate;
+
+public class Customer_Account_Statement{
+	
+	private int CAID;
+	private int CustId;
+	private long amount;
+	private String deposit_withdrawl;
+	private LocalDate deposit_date;
+	private Customer customer;
+	
+    public Customer_Account_Statement(int CustId,int CAID, long amount, String deposit_withdrawl, LocalDate deposit_date, Customer customer) {
+    	
+    	setCAID(CAID);
+    	setCustId(CustId);
+    	setAmount(amount);
+    	setDeposit_withdrawl(deposit_withdrawl);
+    	setDeposit_date(deposit_date);	
+    	setCustomer(customer);   	
+	}
+    
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public int getCAID() {
+		return CAID;
+	}
+
+	public void setCAID(int cAID) {
+		CAID = cAID;
+	}
+
+	public int getCustId() {
+		return CustId;
+	}
+
+	public void setCustId(int custId) {
+		CustId = custId;
+	}
+
+	public long getAmount() {
+		return amount;
+	}
+
+	public void setAmount(long amount) {
+		this.amount = amount;
+	}
+
+	public String getDeposit_withdrawl() {
+		return deposit_withdrawl;
+	}
+
+	public void setDeposit_withdrawl(String deposit_withdrawl) {
+		this.deposit_withdrawl = deposit_withdrawl;
+	}
+
+	public LocalDate getDeposit_date() {
+		return deposit_date;
+	}
+
+	public void setDeposit_date(LocalDate deposit_date) {
+		this.deposit_date = deposit_date;
+	}
+    
+    @Override
+    public String toString() {
+    	return "Account Details: [ Customer Id: "+customer.getCustId()+", Customer Acc No: "+customer.getAccountno()
+    	+", Customer Name: "+customer.getCustname()+", Customer Add: "+customer.getCust_address()+", Customer DOB: "
+    	+customer.getCust_dob()+", Account Opening Date: "+customer.getCust_account_opening_date()+", Branch Id: "+customer.
+    	getBranch_Obj().getBranch_id()+", Branch Name: "+customer.getBranch_Obj().getBranch_name()+", Branch Add: "+customer.
+    	getBranch_Obj().getBranch_address()+", amount: "+getAmount()+", Deposit/withdrawl: "+getDeposit_withdrawl()+", Date:"+
+    	getDeposit_date()+"]";
+    	
+ }
+}

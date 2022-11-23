@@ -1,0 +1,21 @@
+package com.yash.Program7;
+
+import java.util.Scanner;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Enter First String");
+
+		Scanner sc = new Scanner(System.in);
+		String first = sc.next();
+		
+		System.out.println("Enter Second String");
+		String second = sc.next();
+		
+		String2 s2 = new String2(first,second);
+	    s2.compare();
+	}
+
+}

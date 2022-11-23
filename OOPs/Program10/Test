@@ -1,0 +1,26 @@
+package com.yash.Program10;
+
+public class Test {
+
+	public static void main(String[] args) throws CloneNotSupportedException {
+		try {
+
+			Product original = new Product("101", "Salt", 100, "KG");
+
+			Product copy = original.clone();
+			copy.setPname("Sugar");
+			copy.setPrice(50);
+
+			if (copy instanceof Product) {
+				System.out.println("copy = " + copy.getPname() + " - " + copy.getPrice());
+			} else {
+				System.out.println("original = " + original.getPname() + " - " + original.getPrice());
+			}
+
+		}
+
+		catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+	}
+}

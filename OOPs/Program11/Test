@@ -1,0 +1,14 @@
+package com.yash.Program11;
+
+import java.time.LocalDate;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		Employee emp1 = new Employee(101, "Surbhi", 15000, "Sudama Nager", LocalDate.of(1994, 10, 26), LocalDate.of(2021,12,3));
+		Employee emp2 = new Employee(102, "Ankit", 11000, "Nanda Nager", LocalDate.of(1990, 8, 9), LocalDate.of(2021,10,23));
+		System.out.println(emp1);
+		System.out.println(emp2);		
+	}
+}

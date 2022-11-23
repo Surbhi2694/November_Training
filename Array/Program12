@@ -1,0 +1,31 @@
+package com.yash;
+
+import java.util.Scanner;
+
+public class UnitBasisArraySort {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter how many numbers you want to enter");
+		int limit = sc.nextInt();
+		int temp = 0;
+		int[] numbers = new int[limit];
+		System.out.println("Enter the list of numbers");
+		for (int j = 0; j < limit; j++) {
+			numbers[j] = sc.nextInt();
+		}
+		for (int i = 0; i < limit; i++) {
+			for (int j = i; j < limit; j++) {
+				if (numbers[i] % 10 > numbers[j] % 10) {
+					temp = numbers[i];
+					numbers[i] = numbers[j];
+					numbers[j] = temp;
+				}
+			}
+		}
+		for (int a : numbers) {
+			System.out.println(a);
+		}
+		sc.close();
+	}
+}

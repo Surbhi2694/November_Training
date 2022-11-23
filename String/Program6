@@ -1,0 +1,32 @@
+package com.yash;
+
+public class StringPoolAndHeap {
+
+	public static void main(String[] args) {
+		StringPoolAndHeap poolAndHeap = new StringPoolAndHeap();
+		poolAndHeap.method1();
+		poolAndHeap.method2();
+	}
+
+	private void method1() {
+		String s1 = "Surbhi";
+		String s2 = "Surbhi";
+
+		System.out.println("String Pool");
+		if (s1 == s2)
+			System.out.println("Objects are same");
+		else
+			System.out.println("Objects are not same");
+	}
+
+	private void method2() {
+		String s1 = new String("Tiwari");
+		String s2 = new String("Tiwari");
+
+		System.out.println("Heap");
+		if (s1 == s2)
+			System.out.println("Objects are same");
+		else
+			System.out.println("Objects are not same");
+	}
+}

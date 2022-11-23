@@ -1,0 +1,16 @@
+package com.yash.Program8;
+
+import java.time.LocalDate;
+
+public class Electronics {
+	
+	public int id; 
+	public String semiconductorType;
+	public LocalDate dateOfManufacturing;
+	
+	@Override
+	public String toString() {
+		return "Id: " + id+", Semiconductor Type: "+semiconductorType+", Manufacturing Date: "+dateOfManufacturing;
+	}
+
+}

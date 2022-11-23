@@ -1,0 +1,47 @@
+package com.yash.Program6;
+
+import java.util.Scanner;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		 
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter how many numbers you want to enter");
+		int limit = sc.nextInt();
+		int[] numbers = new int[limit];
+		MaxOfThree mx3 = new MaxOfThree();
+		MaxOfFour mx4 = new MaxOfFour();
+		if(limit == 3) {
+			System.out.println("Enter few numbers to find greatest among them");
+			for (int j = 0; j < limit; j++) {
+				numbers[j] = sc.nextInt();
+			}
+			mx3.maximum(numbers);	
+		}else {
+			if(limit == 4) {
+				System.out.println("Enter few numbers to find greatest among them");
+				for (int j = 0; j < limit; j++) {
+					numbers[j] = sc.nextInt();
+				}
+				mx4.maximum(numbers);	
+			}else {
+				int temp = 0;
+				for (int k = 0; k < 4; k++) {
+
+					for (int l = k + 1; l < 4; l++) {
+
+						if (numbers[k] < numbers[l]) {
+							temp = numbers[k];
+							numbers[k] = numbers[l];
+							numbers[l] = temp;
+						}
+					}
+				}
+				System.out.println("The greatest number among the provided list is : " + numbers[0]);
+			}
+		}
+
+	}
+
+}

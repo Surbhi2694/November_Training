@@ -1,0 +1,21 @@
+package com.yash;
+
+public class VowelConsonantTogether {
+	
+	public static void main(String[] args) {
+
+		char[] sequence = {'a','b','c','d','e','f','g','h','i','j','k','l','m',
+					 'n','o','p','q','r','s','t','u','v','w','x','y','z'};
+
+		for (int i = 0; i < sequence.length; i++) {
+			if(sequence[i]=='a'||sequence[i]=='e'||sequence[i]=='i'||sequence[i]=='o'||sequence[i]=='u') {
+				System.out.println("Vowel: "+sequence[i]);
+			}
+			else {
+				System.out.println("Consonants: "+sequence[i]);
+			}
+		}
+		
+	}
+
+}

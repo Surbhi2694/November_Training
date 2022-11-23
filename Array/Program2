@@ -1,0 +1,36 @@
+package com.yash;
+
+import java.util.Scanner;
+
+public class ArrayDupAndCount {
+	
+	public static void main(String[] args) {
+
+		int count = 1, temp=0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter how many numbers you want to enter");
+		int limit = sc.nextInt();
+		int[] numbers = new int[limit];
+		System.out.println("Enter the list of numbers to find duplicate and their count");
+		for (int j = 0; j < limit; j++) {
+			numbers[j] = sc.nextInt();
+		}
+		
+		for (int k = 0; k < limit; k++) {
+
+			for (int l = k+1; l < limit; l++) {
+
+				if(numbers[k] == numbers[l])
+				{
+					numbers[l] = temp--;
+					count++;
+				}
+			}
+			if(count>1) {
+				System.out.println("Found duplicate number which is: " + numbers[k] + " and its count : "+count);
+			}
+			count = 1;		
+		}
+		sc.close();
+	}
+}

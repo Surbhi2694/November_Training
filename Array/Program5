@@ -1,0 +1,53 @@
+package com.yash;
+
+import java.util.Scanner;
+
+public class EvenOddPerfectPrime {
+
+	public static void main(String[] args) {
+		
+		int even = 0;
+		int odd =0;
+		int perfect =0;
+		int prime =0;
+		int sum = 1;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter how many numbers you want to enter");
+		int limit = sc.nextInt();
+		int[] numbers = new int[limit];
+		System.out.println("Enter the list of numbers");
+		for (int j = 0; j < limit; j++) {
+			numbers[j] = sc.nextInt();
+		}
+		
+		for (int j = 0; j < limit; j++) {
+			if(numbers[j]%2 == 0) {
+				even++;
+				for(int i = 2; i<= numbers[j]/2; i++)
+				{
+					if(numbers[j]%i == 0)
+					{
+						sum = sum+i;
+					}	
+				}
+				if(sum == numbers[j]) {
+					perfect++;
+				}
+			}
+			if(numbers[j]%2 != 0)
+			{
+				odd++;
+			}
+			if((numbers[j] == 1) || (numbers[j] == 2) || (numbers[j] == 3) || (numbers[j] == 5))  {
+				prime++;
+			}
+			if((numbers[j]%2 != 0) && (numbers[j]%3 != 0) && (numbers[j]%5 != 0))  {
+				prime++;
+			}	
+		}
+		System.out.println("even: "+even+" odd: "+odd+" perfect: "+perfect+" prime: "+prime);
+	    sc.close();
+	}
+	
+
+}

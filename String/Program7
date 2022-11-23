@@ -1,0 +1,38 @@
+package com.yash;
+
+public class GarbageCollector {
+	
+	private int empId;
+	private String name;
+	private int age;
+	
+	public GarbageCollector(int empId, int age, String name) {
+		this.age = age;
+		this.name = name;
+		this.empId = empId;
+	}
+	
+	public void display() {		
+		System.out.println("Employee Id is: "+empId+" Employee name is: "+name+" Age is: "+age);	
+	}
+	
+	public static void main(String[] args) {
+		GarbageCollector gc1= new GarbageCollector(1, 24, "Surbhi");
+		GarbageCollector gc2= new GarbageCollector(2, 31, "Ankit");
+		GarbageCollector gc3= new GarbageCollector(3, 35, "Kiran");
+		gc1.display();
+		gc2.display();
+		gc3.display();
+		
+		{
+			GarbageCollector gc4= new GarbageCollector(4, 29, "Shikha");
+			gc4.display();
+			GarbageCollector gc5= new GarbageCollector(5, 27, "Grihansh");
+			gc5.display();
+			
+			gc4 = null;
+			gc5 = null;
+			System.gc();
+		}		
+	}
+}

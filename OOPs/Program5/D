@@ -1,0 +1,18 @@
+package com.yash.Program5;
+
+public class D extends C{
+	
+	@Override
+	void div(int a,int b) {
+		System.out.println("Divison is: " + (a/b));
+	}
+	
+	public static void main(String[] args) {
+		
+		D d = new D();
+		d.sum(4, 5);
+		d.sub(6, 2);
+		d.mul(2, 8);
+		d.div(18, 9);
+	}
+}

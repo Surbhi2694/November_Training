@@ -1,0 +1,46 @@
+package com.yash.Program2;
+
+public class Triangle implements Shape{
+
+	String[] st;
+	int x1,x2,x3,y1,y2,y3;
+	double area;
+	double b,h;
+	@Override
+	public double area(String[] str) {
+		
+		st = (str[0].split(","));
+		x1 = Integer.parseInt(st[0]);
+		y1 = Integer.parseInt(st[1]);
+		
+		st = (str[1].split(","));
+		x2 = Integer.parseInt(st[0]);
+		y2 = Integer.parseInt(st[1]);
+		
+		st = (str[2].split(","));
+		x3 = Integer.parseInt(st[0]);
+		y3 = Integer.parseInt(st[1]);
+	
+		area = (x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))*0.5;
+//		b = side_BC();
+//		h = side_AC();
+//		area = b*h*0.5;
+		return area;
+	}
+
+	public double side_AB() {
+        
+		return Math.sqrt((Math.pow((x2-x1), 2) + Math.pow((y2-y1), 2)));	
+	}
+	
+	public double side_BC() {
+		
+		return Math.sqrt((Math.pow((x3-x2), 2) + Math.pow((y3-y2), 2)));
+	}
+	
+    public double side_AC() {
+		
+		return Math.sqrt((Math.pow((x3-x1), 2) + Math.pow((y3-y1), 2)));
+	}
+
+}

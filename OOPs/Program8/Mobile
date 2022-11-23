@@ -1,0 +1,14 @@
+package com.yash.Program8;
+
+import java.time.LocalDate;
+
+public class Mobile extends Electronics{
+	
+	public Mobile(int id, String semiconductorType, LocalDate dateOfManufacturing) {
+		super.id = id;
+		super.semiconductorType = semiconductorType;
+		super.dateOfManufacturing = dateOfManufacturing;
+	}
+	
+
+}

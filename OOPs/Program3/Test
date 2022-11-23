@@ -1,0 +1,50 @@
+package com.yash.Program3;
+
+import java.time.LocalDate;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		Branch[] br = new Branch[3];
+
+		br[0] = new Branch();
+		br[1] = new Branch();
+		br[2] = new Branch();
+
+		br[0].setBranch_id(01);
+		br[0].setBranch_name("Indore");
+		br[0].setBranch_address("Gumasta Nagar");
+		br[1].setBranch_id(03);
+		br[1].setBranch_name("Bhopal");
+		br[1].setBranch_address("Ghandhi Nagar");
+		br[2].setBranch_id(02);
+		br[2].setBranch_name("Ujjain");
+		br[2].setBranch_address("Mahakaal");
+		
+		Customer cus1 = new Customer(101, 54635243645l, "Surbhi", "Indore", LocalDate.of(1994, 10, 26),
+				LocalDate.of(2018, 6, 14), br[0]);
+		Customer cus2 = new Customer(102, 54634534322l, "Ankit", "Bhopal", LocalDate.of(1990, 8, 8),
+				LocalDate.of(2019, 12, 14), br[1]);
+		Customer cus3 = new Customer(103, 54635276854l, "Kiran", "Ujjain", LocalDate.of(2001, 1, 13),
+				LocalDate.of(2019, 6, 14), br[2]);
+
+		Customer_Account_Statement cas1 = new Customer_Account_Statement(101, 1001, 10000, "deposite",
+				LocalDate.of(2022, 8, 16),cus1);
+		Customer_Account_Statement cas2 = new Customer_Account_Statement(101, 1001, 3000, "withdrawl",
+				LocalDate.of(2022, 5, 12),cus1);
+		Customer_Account_Statement cas3 = new Customer_Account_Statement(102, 1002, 40000, "deposite",
+				LocalDate.of(2021, 3, 4),cus2);
+		Customer_Account_Statement cas4 = new Customer_Account_Statement(103, 1003, 50000, "deposite",
+				LocalDate.of(2022, 2, 6),cus3);
+		Customer_Account_Statement cas5 = new Customer_Account_Statement(103, 1003, 20000, "withdrawl",
+				LocalDate.of(2021, 12, 16),cus3);
+		
+		System.out.println(cas1.toString());
+		System.out.println(cas2.toString());
+		System.out.println(cas3.toString());
+		System.out.println(cas4.toString());
+		System.out.println(cas5.toString());
+	}
+
+}

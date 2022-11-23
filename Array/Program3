@@ -1,0 +1,50 @@
+package com.yash;
+
+import java.util.Scanner;
+
+public class PythagorasArray {
+
+	public static void main(String[] args) {
+
+		int x, y, z;
+		int temp = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter how many numbers you want to enter");
+		int limit = sc.nextInt();
+		int[] numbers = new int[limit];
+		System.out.println("Enter the list of numbers");
+		for (int j = 0; j < limit; j++) {
+			numbers[j] = sc.nextInt();
+		}		
+		for (int k = 0; k < limit; k++) {
+
+			for (int l = k+1; l < limit; l++) {
+
+				if(numbers[k] == numbers[l])
+				{
+					numbers[l] = temp--;
+				}
+			}		
+		}
+		System.out.println("Pythagoras templates combinations available in the given list are: ");
+		for (int a = 0; a < limit; a++) {
+			for (int b = a+1; b < limit; b++) {
+				for (int c = b+1; c < limit; c++) {
+
+					x = numbers[a] * numbers[a];
+					y = numbers[b] * numbers[b];
+					z = numbers[c] * numbers[c];
+
+					if (x == y + z || y == x + z || z == x + y) {
+					    System.out.println(numbers[a]+", "+numbers[b]+", "+numbers[c]);
+					}
+
+				}
+
+			}
+
+		}
+		sc.close();
+	}
+
+}

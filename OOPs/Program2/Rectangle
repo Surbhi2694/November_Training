@@ -1,0 +1,52 @@
+package com.yash.Program2;
+
+public class Rectangle implements Shape{
+	
+	String[] st;
+	int x1,x2,x3,x4,y1,y2,y3,y4;
+	double area;
+	double distance;
+	double length, breadth;
+
+	@Override
+	public double area(String[] str) {
+		length = length(str);
+		breadth = breadth();
+		area = length*breadth;
+		System.out.println("length: "+length +", width: "+breadth);
+		return area;
+	}
+
+	public double length(String[] str) {
+		
+		st = (str[0].split(","));
+		x1 = Integer.parseInt(st[0]);
+		y1 = Integer.parseInt(st[1]);
+		
+		st = (str[1].split(","));
+		x2 = Integer.parseInt(st[0]);
+		y2 = Integer.parseInt(st[1]);
+		
+		st = (str[2].split(","));
+		x3 = Integer.parseInt(st[0]);
+		y3 = Integer.parseInt(st[1]);
+		
+		st = (str[2].split(","));
+		x3 = Integer.parseInt(st[0]);
+		y3 = Integer.parseInt(st[1]);
+		
+		st = (str[3].split(","));
+		x4 = Integer.parseInt(st[0]);
+		y4 = Integer.parseInt(st[1]);
+		
+		distance = Math.sqrt((Math.pow((x4-x1), 2) + Math.pow((y4-y1), 2)));
+		return distance;
+	}
+
+	public double breadth() {
+		
+		distance = Math.sqrt((Math.pow((x2-x1), 2) + Math.pow((y2-y1), 2)));
+		return distance;
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.yash;
+
+import java.io.IOException;
+import java.io.StringReader;
+import java.util.Scanner;
+
+public class RemoveVowel {
+	
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter any string");
+		String word = sc.next();
+		String newString = "";
+		char[] array = new char[word.length()];
+		StringReader sr = new StringReader(word);
+		sr.read(array);
+		for (int i = 0; i < array.length; i++) {
+			if((array[i] == 'a') || (array[i] == 'e') || (array[i] == 'i') || (array[i] == 'o') || (array[i] == 'u')) {
+				
+			}
+			else {
+				newString = newString+array[i];
+			}
+		}
+		System.out.println("New string without vowels are: "+newString);
+		sc.close();
+	}
+
+}

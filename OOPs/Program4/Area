@@ -1,0 +1,46 @@
+package com.yash.Program4;
+
+import java.util.Scanner;
+
+public class Area {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter sides of shape and -1 after complete");
+		int j = 0;
+		double area;
+		int[] side = new int[3];
+		int number = sc.nextInt();
+		while (number != -1) {
+			side[j] = number;
+			number = sc.nextInt();
+			j++;
+		}
+
+		if ((side[2] == 0) && (side[1] != 0)) {
+			area = side[0] * side[0];
+			System.out.println("Area of square is: " + area);
+		} else {
+			System.out.println("For triangle area press 1");
+			System.out.println("For rectangle area press 2");
+			if (sc.nextInt() == 1) {
+				float s = (side[0] + side[1] + side[2])/2;
+				area = Math.sqrt(s * (s - side[0]) * (s - side[1]) * (s - side[2]));
+				System.out.println("Area of triangle is: " + area);
+			} else {
+
+				if (side[0] == side[1]) {
+					area = side[2] * side[1];
+					System.out.println("Area of rectangle is: " + area);
+				} else {
+					area = side[0] * side[1];
+					System.out.println("Area of rectangle is: " + area);
+				}
+			}
+
+		}
+
+	}
+
+}

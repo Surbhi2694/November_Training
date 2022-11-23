@@ -1,0 +1,13 @@
+package com.yash.Program8;
+
+import java.time.LocalDate;
+
+public class LCD extends Electronics{
+	
+	public LCD(int id, String semiconductorType, LocalDate dateOfManufacturing) {
+		super.id = id;
+		super.semiconductorType = semiconductorType;
+		super.dateOfManufacturing = dateOfManufacturing;
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.yash.Program7;
+
+public class String1 {
+
+	String str;
+
+	public String1(String str) {
+		this.str = str;
+	}
+
+}

@@ -1,0 +1,70 @@
+package com.yash.Program3;
+
+import java.time.LocalDate;
+
+public class Customer {
+	
+	private int CustId;
+	private long accountno;
+	private String custname;
+	private String cust_address;
+	private LocalDate cust_dob;
+	private LocalDate cust_account_opening_date;
+	private Branch Branch_Obj;
+	
+	public Customer(int CustId, long accountno, String custname, String cust_address, LocalDate cust_dob, 
+	LocalDate cust_account_opening_date, Branch Branch_Obj) {
+		setAccountno(accountno);
+    	setBranch_Obj(Branch_Obj);
+    	setCust_account_opening_date(cust_account_opening_date);
+    	setCust_address(cust_address);
+    	setCust_dob(cust_dob);
+    	setCustId(CustId);
+    	setCustname(custname);
+	}
+	
+	public int getCustId() {
+		return CustId;
+	}
+	public void setCustId(int custId) {
+		CustId = custId;
+	}
+	public long getAccountno() {
+		return accountno;
+	}
+	public void setAccountno(long accountno) {
+		this.accountno = accountno;
+	}
+	public String getCustname() {
+		return custname;
+	}
+	public void setCustname(String custname) {
+		this.custname = custname;
+	}
+	public String getCust_address() {
+		return cust_address;
+	}
+	public void setCust_address(String cust_address) {
+		this.cust_address = cust_address;
+	}
+	public LocalDate getCust_dob() {
+		return cust_dob;
+	}
+	public void setCust_dob(LocalDate cust_dob) {
+		this.cust_dob = cust_dob;
+	}
+	public LocalDate getCust_account_opening_date() {
+		return cust_account_opening_date;
+	}
+	public void setCust_account_opening_date(LocalDate cust_account_opening_date) {
+		this.cust_account_opening_date = cust_account_opening_date;
+	}
+	public Branch getBranch_Obj() {
+		return Branch_Obj;
+	}
+	public void setBranch_Obj(Branch branch_Obj) {
+		Branch_Obj = branch_Obj;
+	}
+	
+
+}

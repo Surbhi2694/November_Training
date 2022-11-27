@@ -1,0 +1,8 @@
+package com.yash.Program4;
+
+public class Category {
+	
+	private int catid;
+	private String categoryname;
+
+}

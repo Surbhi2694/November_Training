@@ -1,0 +1,23 @@
+package com.yash.Program7;
+
+import java.io.IOException;
+
+public class ExceptionChaining {
+	
+	static void divison() throws Throwable {
+		
+		try {
+			System.out.println(10/0);
+		}catch (ArithmeticException e) {
+           throw e.initCause(new IOException("We are unable to read write and hold infinity"));
+		}	
+	}
+	
+	public static void main(String[] args) {
+		try {
+			divison();
+		}catch (Throwable e) {
+			System.out.println(e.getCause());
+		}		
+	}
+}

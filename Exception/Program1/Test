@@ -1,0 +1,46 @@
+package com.yash.Program1;
+
+import java.util.Scanner;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("To get result enter all the subject marks in order of");
+		System.out.println("1: Maths");
+		System.out.println("2: Physics");
+		System.out.println("3: Chemistry");
+		System.out.println("4: Hindi");
+		System.out.println("5: English");
+		
+		int[] marks = new int[5];
+		int count = 1;
+		int j = 0;
+		while(j < 5) {
+			marks[j] = sc.nextInt();
+			try {
+				if(marks[j] <0) {
+					throw new ResultException("Marks cann't be less than 0, please re-enter");
+				}
+				}catch (ResultException e) {
+					System.out.println(e.getMessage());	
+					count=0;
+				}
+			if(count !=0) {
+			j++;
+			}
+			count =1;
+		}	
+		
+		StudentResult srobj = new StudentResult();
+		srobj.setMaths(marks[0]);
+		srobj.setPhysics(marks[1]);
+		srobj.setChemistry(marks[2]);
+		srobj.setHindi(marks[3]);
+		srobj.setEnglish(marks[4]);
+		Student st = new Student(101,"Surbhi","Sudama Nagar", srobj);
+		
+		System.out.println(st);
+	}
+}
